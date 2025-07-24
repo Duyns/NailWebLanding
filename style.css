@@ -1,0 +1,224 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  background: #2a9b92;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 155, 146, 1) 0%,
+    rgba(100, 87, 199, 1) 50%,
+    rgba(220, 128, 232, 1) 100%
+  );
+  font-family: Arial, sans-serif;
+
+  --header-height: 70px;
+}
+
+/* ======================= common ======================= */
+.main-content {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: calc(100% - 100px);
+}
+a {
+  text-decoration: none;
+}
+
+/* ======================= header ======================= */
+.header {
+  background-color: #8383836a;
+  height: var(--header-height);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.header .body {
+  display: flex;
+}
+.logo {
+  width: calc(var(--header-height) * 1.5);
+  margin-top: calc(var(--header-height) * (-0.15));
+  margin-left: 5%;
+}
+.nav {
+  margin-left: auto;
+  width: 60%;
+}
+.nav ul {
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.8rem;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.nav a {
+  color: #ffffff;
+  padding: 20px 20px;
+  position: relative;
+}
+.nav a:hover,
+.nav li.active a {
+  color: #d0f37e;
+  text-shadow: 0.5px 0 0 currentColor, 0 0.5px 0 currentColor,
+    -0.5px 0 0 currentColor, 0 -0.5px 0 currentColor;
+}
+.nav li.active a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 23px;
+  bottom: 10px;
+  width: 80px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #000000;
+}
+
+/* ======================= main ======================= */
+/* ======================= hero ======================= */
+.hero {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background-color: #000000;
+}
+.hero-bg {
+  height: 90%;
+  background: url(/NailScheduleBooking/images/hero/shop1.jpg) center/cover;
+}
+h1 {
+  color: #d0f37e;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: --header-height;
+  position: relative;
+  top: 60%;
+}
+
+/* ======================= about ======================= */
+.about h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 550;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d0f37e;
+  margin: 10px 0;
+}
+.about .body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d0d0d081;
+  border-radius: 50px;
+  padding: 50px 0;
+  margin-top: 20px;
+}
+.about .body .content {
+  margin: 0 0 0 50px;
+}
+.about .body img {
+  display: block;
+  width: 75%;
+  border-radius: 10%;
+  margin: 0 auto;
+}
+#about {
+  scroll-margin-top: 45vh;
+}
+
+/* ======================= reference home ======================= */
+.reference h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 550;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d0f37e;
+  margin: 60px 0 10px 0;
+}
+.reference p {
+  text-align: center;
+}
+.reference .body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d0d0d081;
+  border-radius: 50px;
+  padding: 50px 0;
+  margin-top: 20px;
+}
+.reference .body ul {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reference .body img {
+  display: block;
+  width: 70%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.reference .body a {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+}
+
+/* ======================= reference detail ======================= */
+/* ======================= reference detail header ======================= */
+.reference-header ul {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--header-height) + 20px);
+}
+.reference-header button {
+  background-color: #ffffff5f;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  border: none;
+  border-style: dashed;
+}
+.reference-header button:hover {
+  background-color: #808080;
+}
+
+/* ======================= reference detail content ======================= */
+.reference-detail h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 550;
+  letter-spacing: 2px;
+  color: #d0f37e;
+  margin: 30px 0;
+}
+.reference-detail .body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.reference-detail .body img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+  margin: 0 20px;
+}
+
+/* ======================= prices ======================= */
+.prices {
+}
+
+/* ======================= feedbacks ======================= */

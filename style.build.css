@@ -1,0 +1,66 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-image: url("/NailScheduleBooking/images/bg.jpg");
+  font-family: Arial, sans-serif;
+
+  --header-height: 90px;
+}
+
+/* common */
+.main-content {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: calc(100% - 60px);
+}
+
+/* header */
+.header {
+  background-color: #8383836a;
+  height: var(--header-height);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+.header .body {
+  display: flex;
+}
+.logo {
+  width: 128px;
+  margin-top: -10px;
+}
+.nav {
+  margin-left: auto;
+  width: 45%;
+}
+.nav ul {
+  display: flex;
+  height: var(--header-height);
+  align-items: center;
+  justify-content: space-around;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  color: #d0f37e;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: var(--header-height);
+}
+
+a {
+  color: #d0f37e;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
