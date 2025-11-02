@@ -77,6 +77,9 @@ html {
     text-transform: uppercase;
     cursor: pointer;
   }
+  .no-scroll {
+    overflow: hidden;
+  }
 }
 
 /* ======================= common ======================= */
@@ -97,7 +100,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* position: relative; */
 }
 .header.fixed {
   position: sticky;
@@ -135,15 +137,6 @@ html {
   justify-content: space-between;
   width: 70%;
 }
-/* .header .body .nav .nav-contact {
-  width: 12.5%;
-  display: flex;
-  justify-content: space-between;
-  gap: 12.5%;
-}
-.header .body .nav .nav-contact img {
-  width: 100%;
-} */
 .header .body .nav .btn-book {
   width: 17.5%;
   height: 100%;
@@ -168,7 +161,6 @@ html {
   width: 40%;
   top: 35%;
   left: 5%;
-  /* transform: translate(-50%, -50%); */
   text-align: center;
 }
 .hero .content h1 {
@@ -277,7 +269,6 @@ html {
 }
 .service .service-item {
   flex: 1;
-  /* margin: auto 0; */
   overflow: hidden;
 }
 .service .service-item img {
@@ -306,13 +297,13 @@ html {
 }
 .reference .reference-item {
   flex: 1;
-  /* margin: 0 12px; */
 }
 .reference .reference-item > img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 .reference .reference-item .description {
   display: flex;
@@ -395,7 +386,7 @@ html {
   margin-top: 24px;
 }
 
-/* feedback */
+/* =============== feedback ======================= */
 .feedback {
   padding: 80px 0;
   background-color: var(--secondary-color);
@@ -436,7 +427,7 @@ html {
   width: 4%;
 }
 
-/* footer */
+/* =============== footer ======================= */
 .footer {
   padding: 80px 0;
   background-color: var(--main-text-color);
@@ -487,4 +478,125 @@ html {
 }
 .footer .body .col .contact-item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+/* =============== popup-reference-nail ======================= */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.nail-reference-popup .popup__content {
+  background: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  transform: scale(0);
+  transition: transform 0.2s;
+  height: 80%;
+}
+.popup.show .popup__content {
+  transform: scale(1);
+}
+.popup .title {
+  text-align: center;
+}
+.nail-reference-popup .popup__close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+.popup__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.popup__tab {
+  padding: 8px 16px;
+  border: none;
+  background: var(--secondary-color);
+  color: var(--subtext-color);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+.popup__tab:hover {
+  transform: scale(1.05);
+  color: var(--main-text-color);
+}
+.popup__tab.active {
+  background: var(--main-text-color);
+  color: #fff;
+}
+.popup__gallery {
+  height: 75%;
+  margin-top: 1.5%;
+  overflow: scroll;
+}
+.popup__grid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, 22%);
+  gap: 3%;
+}
+.popup__grid.active {
+  display: grid;
+}
+.popup__grid img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.popup__grid img:hover {
+  transform: scale(1.05);
+}
+/* =============== popup-image-scale ================= */
+.popup-image {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+}
+.popup-image .popup__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-image img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+.popup-image .popup__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.popup__prev,
+.popup__next {
+  font-size: 40px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.popup__prev:hover,
+.popup__next:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

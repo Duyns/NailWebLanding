@@ -6,23 +6,9 @@
     <title>Meili.Room</title>
     <link rel="stylesheet" href="/NailWebLanding/reset.css" />
     <link rel="stylesheet" href="/NailWebLanding/style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/NailWebLanding/images/ico/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/NailWebLanding/images/ico/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/NailWebLanding/images/ico/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/NailWebLanding/images/ico/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/NailWebLanding/images/ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/NailWebLanding/images/ico/favicon-16x16.png" />
     <link rel="manifest" href="/NailWebLanding/images/ico/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -250,13 +236,13 @@
             <p class="title">Mẫu tham khảo</p>
             <div class="reference-list">
               <div class="reference-item reference-item-nail">
-                  <img
+                  <img class="btn-more-nail"
                     src="/NailWebLanding/images/reference/nail-1.jpg"
                     alt="Mẫu móng"
                   />
                   <div class="description"> 
                     <h4>Mẫu móng</h4>
-                    <img class="btn"
+                    <img class="btn btn-more-nail"
                       src="/NailWebLanding/images/icon/icon-more.svg"
                       alt="Xem thêm"
                     />
@@ -270,7 +256,7 @@
                   />
                   <div class="description">
                     <h4>Mẫu mi</h4>
-                    <img class="btn"
+                    <img class="btn btn-more-eyelash"
                       src="/NailWebLanding/images/icon/icon-more.svg"
                       alt="Xem thêm"
                     />
@@ -542,6 +528,54 @@
           </div>
         </div>
      </footer>
+     <!-- Popups -->
+      <!-- Popup-reference-nail -->
+    <div class="popup nail-reference-popup">
+      <div class="popup__content main-content">
+        <span class="popup__close">&times;</span>
+        <p class="title">Gallery mẫu nail</p>
+        <hr>
+        <div class="popup__tabs">
+          <button class="popup__tab p-400 active" data-tab="basic">Cơ bản</button>
+          <button class="popup__tab p-400" data-tab="luxury">Sang trọng</button>
+          <button class="popup__tab p-400" data-tab="design">Thiết kế</button>
+        </div>
+        <hr>
+        <div class="popup__gallery">
+          <div class="popup__grid active" id="tab-basic">
+            <img src="./images/reference/basic/sample1.jpg" alt="Mẫu 1" />
+            <img src="./images/reference/basic/sample2.jpg" alt="Mẫu 2" />
+            <img src="./images/reference/basic/sample3.jpg" alt="Mẫu 3" />
+            <img src="./images/reference/basic/sample4.jpg" alt="Mẫu 4" />
+            <img src="./images/reference/basic/sample5.jpg" alt="Mẫu 5" />
+            <img src="./images/reference/basic/sample6.jpg" alt="Mẫu 6" />
+            <img src="./images/reference/basic/sample7.jpg" alt="Mẫu 7" />
+            <img src="./images/reference/basic/sample8.jpg" alt="Mẫu 8" />
+            <img src="./images/reference/basic/sample9.jpg" alt="Mẫu 9" />
+            <img src="./images/reference/basic/sample10.jpg" alt="Mẫu 10" />
+          </div>
+          <div class="popup__grid" id="tab-luxury">
+            <img src="./images/reference/luxury/sample1.jpg" alt="Mẫu 1" />
+            <img src="./images/reference/luxury/sample2.jpg" alt="Mẫu 2" />
+            <img src="./images/reference/luxury/sample3.jpg" alt="Mẫu 3" />
+          </div>
+          <div class="popup__grid" id="tab-design">
+            <img src="./images/reference/design/sample1.jpg" alt="Mẫu 1" />
+            <img src="./images/reference/design/sample2.jpg" alt="Mẫu 2" />
+            <img src="./images/reference/design/sample3.jpg" alt="Mẫu 3" />
+            <img src="./images/reference/design/sample3.jpg" alt="Mẫu 4" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-image">
+      <span class="popup__close">&times;</span>
+      <div class="popup__content main-content">
+        <button class="popup__prev">&#10094;</button>
+        <img id="popup-img" src="" alt="Phóng to ảnh" />
+        <button class="popup__next">&#10095;</button>
+      </div>
+    </div>
     <script src="/NailWebLanding/script.js" defer></script>
      <script></script>
   </body>
